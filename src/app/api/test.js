@@ -17,3 +17,15 @@ function mockPromise(result, delay = 0) {
     });
 }
 
+class testRequests {
+    async Get() {
+        return mockPromise({})
+    }
+    async GetTag(tags) {
+        return mockPromise({})
+    }
+    async GetArticle(article_id) {
+        return mockPromise({})
+
+    }
+}
