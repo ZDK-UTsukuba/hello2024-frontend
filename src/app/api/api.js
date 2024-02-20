@@ -1,4 +1,4 @@
-import { IRequests, IAuthRequests, query } from "./models/request";
+
 
 class FetchRequests {
     url = new URL(process.env.NEXT_PUBLIC_SERVER_ADDRESS ? process.env.NEXT_PUBLIC_SERVER_ADDRESS : "http://localhost:8080")
