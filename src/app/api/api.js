@@ -22,4 +22,26 @@ class FetchRequests {
     }
 
 }
-export { FetchRequests }
+
+class CardRequests {
+    Requests
+    constructor(Requests) {
+        this.Requests = Requests
+    }
+    async Get() {
+        const response = await this.Requests.Get('/api/card')
+        const data = await response.json()
+        return data
+    }
+    async GetTag(tags) {
+        const response = await this.Requests.Get('/api/card', { "keyword": tags.join('+') })
+        const data = await response.json()
+        return data
+    }
+    async GetDetail(article_id) {
+        const response = await this.Requests.Get('/api/article/' + article_id)
+        const data = await response.json()
+        return data
+    }
+}
+export { FetchRequests, CardRequests }
