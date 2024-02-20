@@ -16,16 +16,18 @@ function mockPromise(result, delay = 0) {
         }, delay);
     });
 }
-
+const testGetResponse = []
+const testTagResponse = []
+const testArticleResponse = []
 class testRequests {
     async Get() {
-        return mockPromise({})
+        return mockPromise(testGetReponse)
     }
     async GetTag(tags) {
-        return mockPromise({})
+        return mockPromise(testTagResponse)
     }
     async GetArticle(article_id) {
-        return mockPromise({})
+        return mockPromise(testArticleResponse)
 
     }
 }
