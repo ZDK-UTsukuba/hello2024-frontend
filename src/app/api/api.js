@@ -38,7 +38,7 @@ class CardRequests {
         const data = await response.json()
         return data
     }
-    async GetDetail(article_id) {
+    async GetArticle(article_id) {
         const response = await this.Requests.Get('/api/article/' + article_id)
         const data = await response.json()
         return data
