@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArticleContent } from "@/components/ArticleContent";
+import { Header } from "@/components/Header";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
@@ -13,15 +14,19 @@ const Page = async ({ params }) => {
 
   return (
     <main>
-      <header>
-      <h1>{item.name}</h1>
-        <time>{item.created_at}</time>
-        <p>
-          カテゴリ：
-          {item.categories.join("/")}
-        </p>
-      </header>
-      <ArticleContent markdown={markdown} />
+      <Header />
+      <div class="main-content">
+        <div class="heading">
+          <h1>{item.name}</h1>
+          <time>{item.created_at}</time>
+          <p>
+            カテゴリ：
+            {item.categories.join("/")}
+          </p>
+        </div>
+      
+        <ArticleContent markdown={markdown} />
+      </div>
       <footer>
         <Link href="/">トップに戻る</Link>
       </footer>
