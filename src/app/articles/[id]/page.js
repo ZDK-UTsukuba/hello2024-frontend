@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArticleContent } from "@/components/ArticleContent";
 import { Header } from "@/components/Header";
+// import { Footer } from "@/components/Footer";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
@@ -28,7 +29,7 @@ const Page = async ({ params }) => {
         <ArticleContent markdown={markdown} />
       </div>
       <footer>
-        <Link href="/">トップに戻る</Link>
+        <Link href={`/`}>トップに戻る</Link>
       </footer>
     </main>
   );
