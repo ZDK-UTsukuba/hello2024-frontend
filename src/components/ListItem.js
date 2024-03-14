@@ -9,7 +9,7 @@ const ListItem = ({ id, title, date, categories }) => {
         </Link>
       </div>
       {date && <div>最終更新：{date}</div>}
-      <p>{categories}</p>
+      カテゴリ：{categories}
     </li>
   );
 };

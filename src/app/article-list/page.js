@@ -14,13 +14,14 @@ const Page = async () => {
     <main>
       <Header />
       <div class="main-content">
-        
+
         <ul>
           {json.map((item, index) => (
             <ListItem
               id={item.number}
               title={item.name}
               date={item.created_at}
+              categories={item.categories.join("/")}
               key={index}
             />
           ))}
