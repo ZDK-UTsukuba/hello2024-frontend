@@ -1,7 +1,8 @@
+import ListItem from "@/components/ListItem";
 import { Header } from "@/components/Header";
 // import { Footer } from "@/components/Footer";
-import "@/app/globals.css";
 import Link from "next/link";
+import "@/app/globals.css";
 
 const Page = async () => {
   // index.json を読み込む
@@ -13,13 +14,21 @@ const Page = async () => {
     <main>
       <Header />
       <div class="main-content">
-        <h2>新情Webとは</h2>
-        <p>筑波大学の学生宿舎に入居する新入生向けの情報ポータル</p>
-        <div class="selection">
-          <li><Link href={`/article-list`}>記事一覧</Link></li>
-          <li><Link href={``}>よくある質問</Link></li>
-        </div>
+        
+        <ul>
+          {json.map((item, index) => (
+            <ListItem
+              id={item.number}
+              title={item.name}
+              date={item.created_at}
+              key={index}
+            />
+          ))}
+        </ul>
       </div>
+      <footer>
+        <Link href={`/`}>トップに戻る</Link>
+      </footer>
     </main>
   );
 };
