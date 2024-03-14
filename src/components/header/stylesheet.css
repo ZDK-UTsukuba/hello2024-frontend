@@ -1,0 +1,19 @@
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #00C1D4;
+    vertical-align: middle;
+    z-index: 1;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header > h1 {
+    color: #FFFFFF;
+    font-size: 32px;
+    margin: 0;
+    padding: 16px 24px;
+    float: left;
+  }
+  

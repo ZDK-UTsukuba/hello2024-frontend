@@ -1,28 +1,20 @@
-li {
-  list-style: none;
-}
-
-header {
-  width: 100%;
-  position: fixed;
-}
-
-header > h1 {
-  background-color: #00C1D4;
-  color: #FFFFFF;
+html {
+  background-color: #F7F7F7;
   margin: 0;
-  padding: 8px 24px;
+}
+
+main {
+  /* max-width: px; */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .main-content {
+  width: 80%;
   margin: 0;
   padding: 62px 24px 8px;
 }
 
-footer {
-  padding: 24px;
-}
 
-.selection li {
-  font-size: 18px;
-}

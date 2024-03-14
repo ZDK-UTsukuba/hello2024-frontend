@@ -1,0 +1,11 @@
+.menu-bar-container {
+    background-color: #D9D9D9;
+    width: 20%;
+    position: fixed;
+    top: 87px;
+    right:0;
+}
+
+.menu-title {
+    font-size: 16px;
+}

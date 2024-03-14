@@ -1,8 +1,10 @@
-import ListItem from "@/components/ListItem";
-import { Header } from "@/components/Header";
+import ListItem from "@/components/list-item/ListItem";
+import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import "@/app/globals.css";
+import "@/app/article-list/stylesheet.css";
+import { MenuBar } from "@/components/menu-bar/MenuBar";
 
 const Page = async () => {
   // index.json を読み込む
@@ -13,23 +15,23 @@ const Page = async () => {
   return (
     <main>
       <Header />
-      <div class="main-content">
-
-        <ul>
-          {json.map((item, index) => (
-            <ListItem
-              id={item.number}
-              title={item.name}
-              date={item.created_at}
-              categories={item.categories.join("/")}
-              key={index}
-            />
-          ))}
-        </ul>
+      <MenuBar />
+        <div class="main-content">
+          <ul>
+            {json.map((item, index) => (
+              <ListItem class="list-item"
+                id={item.number}
+                title={item.name}
+                date={item.created_at}
+                categories={item.categories.join("/")}
+                key={index}
+              />
+            ))}
+          </ul>
+        <div class="return">
+          <Link href={`/`}>トップに戻る</Link>
+        </div>
       </div>
-      <footer>
-        <Link href={`/`}>トップに戻る</Link>
-      </footer>
     </main>
   );
 };

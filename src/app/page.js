@@ -1,6 +1,8 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
+import { MenuBar } from "@/components/menu-bar/MenuBar";
 import "@/app/globals.css";
+import "@/app/stylesheet.css";
 import Link from "next/link";
 
 const Page = async () => {
@@ -11,7 +13,9 @@ const Page = async () => {
 
   return (
     <main>
-      <Header />
+    <Header />
+    <div class="container">
+      <MenuBar />
       <div class="main-content">
         <h2>新情Webとは</h2>
         <p>筑波大学の学生宿舎に入居する新入生向けの情報ポータル</p>
@@ -20,6 +24,7 @@ const Page = async () => {
           <li><Link href={``}>よくある質問</Link></li>
         </div>
       </div>
+    </div>
     </main>
   );
 };
