@@ -17,7 +17,7 @@ const Page = async ({ params }) => {
   return (
     <main>
       <Header />
-        <MenuBar />
+      <div class="wrapper">
         <div class="main-content">
           <div class="heading">
             <h1>{item.name}</h1>
@@ -28,9 +28,11 @@ const Page = async ({ params }) => {
             </p>
           </div>
           <ArticleContent markdown={markdown} />
-        <div class="return">
-          <Link href={`/`}>トップに戻る</Link>
+          <div class="return">
+            <Link href={`/`}>トップに戻る</Link>
+          </div>
         </div>
+        <MenuBar />
       </div>
     </main>
   );

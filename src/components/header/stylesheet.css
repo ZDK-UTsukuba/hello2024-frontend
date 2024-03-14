@@ -1,9 +1,7 @@
 header {
     width: 100%;
-    position: fixed;
     background-color: #00C1D4;
     vertical-align: middle;
-    z-index: 1;
     display: inline-block;
     margin: 0;
     padding: 0;

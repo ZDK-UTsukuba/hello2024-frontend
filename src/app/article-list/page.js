@@ -15,7 +15,7 @@ const Page = async () => {
   return (
     <main>
       <Header />
-      <MenuBar />
+      <div class="wrapper">
         <div class="main-content">
           <ul>
             {json.map((item, index) => (
@@ -28,9 +28,11 @@ const Page = async () => {
               />
             ))}
           </ul>
-        <div class="return">
-          <Link href={`/`}>トップに戻る</Link>
+          <div class="return">
+            <Link href={`/`}>トップに戻る</Link>
+          </div>
         </div>
+        <MenuBar />
       </div>
     </main>
   );

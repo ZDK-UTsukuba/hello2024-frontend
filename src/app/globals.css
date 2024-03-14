@@ -8,13 +8,16 @@ main {
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+.wrapper {
   display: flex;
 }
 
 .main-content {
   width: 80%;
   margin: 0;
-  padding: 62px 24px 8px;
+  padding: 0 24px;
 }
 
 
