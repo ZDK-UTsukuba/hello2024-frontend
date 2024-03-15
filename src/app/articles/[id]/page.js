@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArticleContent } from "@/components/ArticleContent";
-import { Header } from "@/components/Header";
+import { ArticleContent } from "@/components/article-content/ArticleContent";
+import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
+import { MenuBar } from "@/components/menu-bar/MenuBar";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
@@ -16,21 +17,23 @@ const Page = async ({ params }) => {
   return (
     <main>
       <Header />
-      <div class="main-content">
-        <div class="heading">
-          <h1>{item.name}</h1>
-          <time>{item.created_at}</time>
-          <p>
-            カテゴリ：
-            {item.categories.join("/")}
-          </p>
+      <div class="wrapper">
+        <div class="main-content">
+          <div class="heading">
+            <h1>{item.name}</h1>
+            <time>{item.created_at}</time>
+            <p>
+              カテゴリ：
+              {item.categories.join("/")}
+            </p>
+          </div>
+          <ArticleContent markdown={markdown} />
+          <div class="return">
+            <Link href={`/`}>トップに戻る</Link>
+          </div>
         </div>
-      
-        <ArticleContent markdown={markdown} />
+        <MenuBar />
       </div>
-      <footer>
-        <Link href={`/`}>トップに戻る</Link>
-      </footer>
     </main>
   );
 };
