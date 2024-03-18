@@ -2,3 +2,7 @@
     padding: 0;
 }
 
+.main-content > li {
+    list-style: none;
+    font-size: 18px;
+}

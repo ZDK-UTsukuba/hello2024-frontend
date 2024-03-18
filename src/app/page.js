@@ -14,12 +14,12 @@ const Page = async () => {
   return (
     <main>
       <Header />
-      <div class="wrapper">
-        <div class="main-content">
+      <div className="wrapper">
+        <div className="main-content">
           <h2>新情Webとは</h2>
           <p>筑波大学の学生宿舎に入居する新入生向けの情報ポータル</p>
-          <div class="selection">
-            <li><Link href={`/article-list`}>記事一覧</Link></li>
+          <div className="selection">
+            <li><Link href={`/article-list/all`}>記事一覧</Link></li>
             <li><Link href={``}>よくある質問</Link></li>
           </div>
         </div>

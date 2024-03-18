@@ -17,9 +17,9 @@ const Page = async ({ params }) => {
   return (
     <main>
       <Header />
-      <div class="wrapper">
-        <div class="main-content">
-          <div class="heading">
+      <div className="wrapper">
+        <div className="main-content">
+          <div className="heading">
             <h1>{item.name}</h1>
             <time>{item.created_at}</time>
             <p>
@@ -28,7 +28,7 @@ const Page = async ({ params }) => {
             </p>
           </div>
           <ArticleContent markdown={markdown} />
-          <div class="return">
+          <div className="return">
             <Link href={`/`}>トップに戻る</Link>
           </div>
         </div>
