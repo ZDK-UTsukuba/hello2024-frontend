@@ -14,13 +14,12 @@ const Page = async ({ params }) => {
 
   const keyword = params["category"];
 
-  console.log(params);
-
   return (
     <main>
       <Header />
       <div className="wrapper">
         <div className="main-content">
+          <h2>記事一覧</h2>
           <ul>
             <CategoryFilter items={json} category={keyword} />
           </ul>

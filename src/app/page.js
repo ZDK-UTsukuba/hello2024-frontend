@@ -19,8 +19,12 @@ const Page = async () => {
           <h2>新情Webとは</h2>
           <p>筑波大学の学生宿舎に入居する新入生向けの情報ポータル</p>
           <div className="selection">
-            <li><Link href={`/article-list/all`}>記事一覧</Link></li>
-            <li><Link href={``}>よくある質問</Link></li>
+            <li>
+              <Link href={`/article-list/all`}>記事一覧</Link>
+            </li>
+            <li>
+              <Link href={``}>よくある質問</Link>
+            </li>
           </div>
         </div>
         <MenuBar />

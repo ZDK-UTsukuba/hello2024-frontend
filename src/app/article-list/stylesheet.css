@@ -1,8 +1,5 @@
 .main-content > ul {
-    padding: 0;
-}
-
-.main-content > li {
-    list-style: none;
-    font-size: 18px;
+  padding: 0;
+  list-style: none;
+  font-size: 18px;
 }
