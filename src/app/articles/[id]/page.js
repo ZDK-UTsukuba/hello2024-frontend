@@ -6,8 +6,7 @@ import { MenuBar } from "@/components/menu-bar/MenuBar";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
-  const BASE_URL =
-    "http://127.0.0.1:8787/posts";
+  const BASE_URL = "http://127.0.0.1:8787/posts";
   const jsonUrl = `${BASE_URL}/${params.id}`;
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
@@ -17,9 +16,9 @@ const Page = async ({ params }) => {
   return (
     <main>
       <Header />
-      <div class="wrapper">
-        <div class="main-content">
-          <div class="heading">
+      <div className="wrapper">
+        <div className="main-content">
+          <div className="heading">
             <h1>{item.name}</h1>
             <time>{item.created_at}</time>
             <p>
@@ -28,7 +27,7 @@ const Page = async ({ params }) => {
             </p>
           </div>
           <ArticleContent markdown={markdown} />
-          <div class="return">
+          <div className="return">
             <Link href={`/`}>トップに戻る</Link>
           </div>
         </div>

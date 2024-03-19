@@ -4,17 +4,32 @@ import Link from "next/link";
 
 export const MenuBar = () => {
   return (
-    <div class="menu-bar-container">
-      <h2 class="menu-title">メニュー</h2>
-      <ul>
-        <li class="menu-item">記事一覧</li>
-        <ul>
-          <li class="menu-category"><Link href={``}>宿舎</Link></li>
-          <li class="menu-category"><Link href={``}>自転車</Link></li>
-        </ul>
-        <li class="menu-item">よくある質問</li>
+    <div className="menu-bar-container">
+      <h2 className="menu-title">メニュー</h2>
+      <ul className="menu-items">
+        <div className="menu-item">
+          <li>
+            <Link href={`/article-list/all`}>記事一覧</Link>
+          </li>
+          <ul className="menu-category">
+            <li>
+              <Link href={`/article-list/test`}>test</Link>
+            </li>
+            <li>
+              <Link href={`/article-list/宿舎`}>宿舎</Link>
+            </li>
+            <li>
+              <Link href={`/article-list/自転車`}>自転車</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="menu-item">
+          <li>
+            <Link href={``}>よくある質問</Link>
+          </li>
           {/* この下にFAQ */}
-        </ul>
+        </div>
+      </ul>
     </div>
   );
 };

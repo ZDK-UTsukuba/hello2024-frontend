@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ListItem = ({ id, title, date, categories }) => {
+const ListItem = ({ id, title, date, category }) => {
   return (
     <li>
       <div>
@@ -9,7 +9,7 @@ const ListItem = ({ id, title, date, categories }) => {
         </Link>
       </div>
       {date && <div>最終更新：{date}</div>}
-      カテゴリ：{categories}
+      カテゴリ：{category}
     </li>
   );
 };
