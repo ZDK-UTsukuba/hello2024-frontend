@@ -27,7 +27,11 @@ export const MenuBar = () => {
           <li>
             <Link href={``}>よくある質問</Link>
           </li>
-          {/* この下にFAQ */}
+        </div>
+        <div className="menu-item">
+          <li>
+            <Link href={``}>質問フォーム↗</Link>
+          </li>
         </div>
       </ul>
     </div>

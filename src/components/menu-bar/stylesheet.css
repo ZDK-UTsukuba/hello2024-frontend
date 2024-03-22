@@ -24,3 +24,12 @@
 .menu-category li {
   padding: 2px;
 }
+
+.menu-items a {
+  text-decoration-line: none;
+  color: black;
+}
+
+.menu-items a:hover {
+  font-weight: bold;
+}
