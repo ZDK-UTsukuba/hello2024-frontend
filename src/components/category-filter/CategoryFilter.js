@@ -5,8 +5,6 @@ const CategoryFilter = ({ items, category }) => {
     ? items
     : items.filter((item) => item.categories.includes(decodeURIComponent(category)));
 
-  console.log(decodeURIComponent(category));
-
   return (
     <>
       {filteredItems.map((item, index) => (
