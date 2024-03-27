@@ -3,7 +3,9 @@ import ListItem from "@/components/list-item/ListItem";
 const CategoryFilter = ({ items, category }) => {
   const filteredItems = category.includes("all")
     ? items
-    : items.filter((item) => item.categories.includes(category));
+    : items.filter((item) => item.categories.includes(decodeURIComponent(category)));
+
+  console.log(decodeURIComponent(category));
 
   return (
     <>

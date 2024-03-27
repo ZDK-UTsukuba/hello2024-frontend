@@ -11,6 +11,7 @@ const Page = async ({ params }) => {
   const url = `http://127.0.0.1:8787/posts`;
   const response = await fetch(url);
   const json = await response.json();
+  // console.log(json);
 
   const keyword = params["category"];
 

@@ -1,14 +1,15 @@
-import Link from "next/link";
-
 const FaqItem = ({ item }) => {
   return (
-    <li>
-      <div>
-          <p>Q: {item.question}</p>
-          <p>A: {item.answer}</p>
-      </div>
-      
-    </li>
+    <>
+      {item.map((faq) => (
+        <li>
+          <div className="faq-item">
+            <p className="faq-q">Q: {faq.question}</p>
+            <p className="faq-a">A: {faq.answer}</p>
+          </div>
+        </li>
+      ))}
+    </>
   );
 };
 
