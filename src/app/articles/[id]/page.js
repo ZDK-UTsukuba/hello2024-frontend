@@ -3,6 +3,7 @@ import { ArticleContent } from "@/components/article-content/ArticleContent";
 import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
+import "@/app/articles/stylesheet.css";
 
 const Page = async ({ params }) => {
   // index.json を読み込む

@@ -2,7 +2,7 @@ import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import "@/app/globals.css";
-import "@/app/article-list/stylesheet.css";
+import "@/app/faq-list/stylesheet.css";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
 import FaqItem from "@/components/faq-item/FaqItem";
 
