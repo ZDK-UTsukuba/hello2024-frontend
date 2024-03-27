@@ -13,9 +13,6 @@ export const MenuBar = () => {
           </li>
           <ul className="menu-category">
             <li>
-              <Link href={`/article-list/test`}>test</Link>
-            </li>
-            <li>
               <Link href={`/article-list/宿舎`}>宿舎</Link>
             </li>
             <li>
@@ -25,7 +22,7 @@ export const MenuBar = () => {
         </div>
         <div className="menu-item">
           <li>
-            <Link href={``}>よくある質問</Link>
+            <Link href={`/faq-list`}>よくある質問</Link>
           </li>
         </div>
         <div className="menu-item">
