@@ -2,12 +2,10 @@ const FaqItem = ({ item }) => {
   return (
     <>
       {item.map((faq) => (
-        <li>
-          <div className="faq-item">
-            <p className="faq-q">Q: {faq.question}</p>
-            <p className="faq-a">A: {faq.answer}</p>
-          </div>
-        </li>
+        <div className="faq-item">
+          <h3 className="faq-q">Q: {faq.question}</h3>
+          <p className="faq-a">A: {faq.answer}</p>
+        </div>
       ))}
     </>
   );

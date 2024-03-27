@@ -18,9 +18,9 @@ const Page = async () => {
       <div className="wrapper">
         <div className="main-content">
           <h2>よくある質問</h2>
-          <ul>
+          <div className="faq-items">
             <FaqItem item={json} />
-          </ul>
+          </div>
           <div className="return">
             <Link href={`/`}>トップに戻る</Link>
           </div>
