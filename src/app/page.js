@@ -23,7 +23,7 @@ const Page = async () => {
               <Link href={`/article-list/all`}>記事一覧</Link>
             </li>
             <li>
-              <Link href={``}>よくある質問</Link>
+              <Link href={`/faq-list`}>よくある質問</Link>
             </li>
           </div>
         </div>
