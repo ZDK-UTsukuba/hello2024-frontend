@@ -17,7 +17,7 @@ const Page = async () => {
       <Header />
       <div className="wrapper">
         <div className="main-content">
-          <h2>よくある質問</h2>
+          <h1>よくある質問</h1>
           <div className="faq-items">
             <FaqItem item={json} />
           </div>

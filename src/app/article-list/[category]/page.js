@@ -20,7 +20,7 @@ const Page = async ({ params }) => {
       <Header />
       <div className="wrapper">
         <div className="main-content">
-          <h2>記事一覧</h2>
+          <h1>記事一覧</h1>
           <ul>
             <CategoryFilter items={json} category={keyword} />
           </ul>

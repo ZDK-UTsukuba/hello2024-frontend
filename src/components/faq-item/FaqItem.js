@@ -3,7 +3,7 @@ const FaqItem = ({ item }) => {
     <>
       {item.map((faq) => (
         <div className="faq-item">
-          <h3 className="faq-q">Q: {faq.question}</h3>
+          <h2 className="faq-q">Q: {faq.question}</h2>
           <p className="faq-a">A: {faq.answer}</p>
         </div>
       ))}
