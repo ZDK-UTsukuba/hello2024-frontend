@@ -31,4 +31,11 @@ const Page = async () => {
   );
 };
 
+export async function generateMetadata() {
+  return {
+    title: "よくある質問",
+    description: "宿舎入居について全代会へよく寄せられる質問について"
+  }
+}
+
 export default Page;
