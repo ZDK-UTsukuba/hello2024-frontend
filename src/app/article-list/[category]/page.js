@@ -39,9 +39,10 @@ export async function generateMetadata({params}) {
 const url = process.env.NEXT_PUBLIC_BASE_URL + "/posts";
 const response = await fetch(url);
 const json = await response.json();
+const urlDecodedCategory = decodeURIComponent(params["category"]);
   return {
-    title: "カテゴリ: "+ decodeURIComponent(params["category"]),
-    description: decodeURIComponent(params["category"]) + "についての記事一覧"
+    title: `カテゴリ: ${urlDecodedCategory}`,
+    description: `${urlDecodedCategory}についての記事一覧`
   }
 }
 
