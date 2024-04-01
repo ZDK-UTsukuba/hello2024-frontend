@@ -1,5 +1,5 @@
 import { Header } from "@/components/header/Header";
-// import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer/Footer";
 import Link from "next/link";
 import "@/app/globals.css";
 import "@/app/faq-list/stylesheet.css";
@@ -27,6 +27,7 @@ const Page = async () => {
         </div>
         <MenuBar />
       </div>
+      <Footer />
     </main>
   );
 };

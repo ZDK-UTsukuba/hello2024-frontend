@@ -1,5 +1,5 @@
 import { Header } from "@/components/header/Header";
-// import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/footer/Footer";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
 import "@/app/globals.css";
 import "@/app/stylesheet.css";
@@ -29,6 +29,7 @@ const Page = async () => {
         </div>
         <MenuBar />
       </div>
+      <Footer />
     </main>
   );
 };
