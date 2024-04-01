@@ -10,13 +10,13 @@ export const Footer = () => {
 
       <p className="footer-list">
         <Link href={`/`}>トップページ</Link >
-        &nbsp;
+        &emsp;
         <Link href={`/article-list/all`}>記事一覧</Link >
-        &nbsp;
+        &emsp;
         <Link href={`/faq-list`}>よくある質問</Link >
       </p>
 
-      <div className="footer-logo">
+      <div >
         <a href="https://www.stb.tsukuba.ac.jp/~zdk/">
           <Image src="/zdk_logo_full.png" alt="全学学類・専門学群・総合学域群代表者会議 ロゴ画像" width={100} height={25} />
         </a>
