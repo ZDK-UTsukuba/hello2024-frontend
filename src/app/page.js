@@ -16,8 +16,8 @@ const Page = async () => {
       <Header />
       <div className="wrapper">
         <div className="main-content">
-          <h2>新情Webとは</h2>
-          <p>新入生情報Web（新情Web）は、筑波大学の学生宿舎に入居する新入生向けの情報ポータルです。<br />
+          <h2>新入生情報Webとは</h2>
+          <p>新入生情報Webは、筑波大学の学生宿舎に入居する新入生向けの情報ポータルです。<br />
             学生宿舎に入居する際の疑問点やその先の生活について情報を提供しています。<br />
             <br />
 
