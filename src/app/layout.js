@@ -7,7 +7,8 @@ export const metadata = {
   publisher: "筑波大学 全学学類・専門学群・総合学域群代表者会議",
   openGraph: {
     type: "website",
-    locale: 'ja_JP',
+    site_name: "筑波大学 新入生情報Web 2024",
+    locale: "ja_JP",
   }
 };
 
