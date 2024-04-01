@@ -34,7 +34,7 @@ const Page = async () => {
         <MenuBar />
       </div>
       <Footer />
-    </main >
+    </main>
   );
 };
 
