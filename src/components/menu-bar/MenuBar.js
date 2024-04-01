@@ -3,6 +3,7 @@ import "@/components/menu-bar/stylesheet.css";
 import Link from "next/link";
 
 export const MenuBar = () => {
+  const categories = ["宿舎生活", "自転車"];
   return (
     <div className="menu-bar-container">
       <h2 className="menu-title">メニュー</h2>
@@ -12,22 +13,22 @@ export const MenuBar = () => {
             <Link href={`/article-list/all`}>記事一覧</Link>
           </li>
           <ul className="menu-category">
-            <li>
-              <Link href={`/article-list/test`}>test</Link>
-            </li>
-            <li>
-              <Link href={`/article-list/宿舎`}>宿舎</Link>
-            </li>
-            <li>
-              <Link href={`/article-list/自転車`}>自転車</Link>
-            </li>
+            {categories.map((category) => (
+              <li>
+                <Link href={`/article-list/${category}`}>{category}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="menu-item">
           <li>
-            <Link href={``}>よくある質問</Link>
+            <Link href={`/faq-list`}>よくある質問</Link>
           </li>
-          {/* この下にFAQ */}
+        </div>
+        <div className="menu-item">
+          <li>
+            <Link href={``}>質問フォーム↗</Link>
+          </li>
         </div>
       </ul>
     </div>

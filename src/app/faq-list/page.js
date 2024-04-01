@@ -2,28 +2,25 @@ import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import "@/app/globals.css";
-import "@/app/article-list/stylesheet.css";
+import "@/app/faq-list/stylesheet.css";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
-import CategoryFilter from "@/components/category-filter/CategoryFilter";
+import FaqItem from "@/components/faq-item/FaqItem";
 
-const Page = async ({ params }) => {
+const Page = async () => {
   // index.json を読み込む
-  const url = `http://127.0.0.1:8787/posts`;
+  const url = `http://127.0.0.1:8787/faqs`;
   const response = await fetch(url);
   const json = await response.json();
-  console.log(json);
-
-  const keyword = params["category"];
 
   return (
     <main>
       <Header />
       <div className="wrapper">
         <div className="main-content">
-          <h1>記事一覧</h1>
-          <ul>
-            <CategoryFilter items={json} category={keyword} />
-          </ul>
+          <h1>よくある質問</h1>
+          <div className="faq-items">
+            <FaqItem item={json} />
+          </div>
           <div className="return">
             <Link href={`/`}>トップに戻る</Link>
           </div>
