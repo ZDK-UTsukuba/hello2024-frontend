@@ -18,7 +18,8 @@ export const Footer = () => {
 
       <div >
         <a href="https://www.stb.tsukuba.ac.jp/~zdk/">
-          <Image src="/zdk_logo_full.png" alt="全学学類・専門学群・総合学域群代表者会議 ロゴ画像" width={200} height={50} />
+          <Image src="/zdk_logo_full.svg" alt="全学学類・専門学群・総合学域群代表者会議 ロゴ画像" width={200} height={50} />
+          
         </a>
       </div>
 
