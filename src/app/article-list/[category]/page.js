@@ -11,7 +11,7 @@ const Page = async ({ params }) => {
   const url = process.env.NEXT_PUBLIC_BASE_URL + "/posts";
   const response = await fetch(url);
   const json = await response.json();
-  console.log(json);
+  // デバッグ用: console.log(json);
 
   const keyword = params["category"];
 
@@ -33,5 +33,16 @@ const Page = async ({ params }) => {
     </main>
   );
 };
+
+export async function generateMetadata({params}) {
+// index.json を読み込む
+const url = process.env.NEXT_PUBLIC_BASE_URL + "/posts";
+const response = await fetch(url);
+const json = await response.json();
+  return {
+    title: "カテゴリ: "+ decodeURIComponent(params["category"]),
+    description: decodeURIComponent(params["category"]) + "についての記事一覧"
+  }
+}
 
 export default Page;
