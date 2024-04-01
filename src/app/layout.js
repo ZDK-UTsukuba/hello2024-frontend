@@ -9,6 +9,9 @@ export const metadata = {
     type: "website",
     site_name: "筑波大学 新入生情報Web 2024",
     locale: "ja_JP",
+  },
+  twitter: {
+    card: "summary"
   }
 };
 
