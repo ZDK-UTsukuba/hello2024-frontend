@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import "@/components/footer/stylesheet.css";
 import Link from "next/link";
 
 
