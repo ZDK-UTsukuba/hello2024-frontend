@@ -3,10 +3,11 @@ import { ArticleContent } from "@/components/article-content/ArticleContent";
 import { Header } from "@/components/header/Header";
 // import { Footer } from "@/components/Footer";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
+import "@/app/articles/stylesheet.css";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
-  const BASE_URL = "http://127.0.0.1:8787/posts";
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL + "/posts";
   const jsonUrl = `${BASE_URL}/${params.id}`;
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
