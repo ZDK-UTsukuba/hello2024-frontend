@@ -33,6 +33,7 @@ const Page = async () => {
         </div>
         <MenuBar />
       </div>
+      <Footer />
     </main >
   );
 };
