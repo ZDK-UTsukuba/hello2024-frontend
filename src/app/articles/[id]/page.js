@@ -7,8 +7,7 @@ import "@/app/articles/stylesheet.css";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL + "/posts";
-  const jsonUrl = `${BASE_URL}/${params.id}`;
+  const jsonUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/posts/${params.id}`;
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
 
@@ -37,5 +36,15 @@ const Page = async ({ params }) => {
     </main>
   );
 };
+
+export async function generateMetadata({params}) {
+  const jsonUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/posts/${params.id}`;
+  const jsonResponse = await fetch(jsonUrl);
+  const item = await jsonResponse.json();
+  return {
+    title: item.name,
+    description: "筑波大学の学生宿舎に関する基本的な情報や宿舎内の設備、部屋の内装などについて"
+  }
+}
 
 export default Page;
