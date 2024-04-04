@@ -40,7 +40,7 @@ const Page = async ({ params }) => {
 };
 
 export async function generateMetadata({params}) {
-  const jsonUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/posts/${params.id}`;
+  const jsonUrl = `${process.env.NEXT_PUBLIC_BACKEND_HOST}/posts/${params.id}`;
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
   return {

@@ -8,7 +8,7 @@ import FaqItem from "@/components/faq-item/FaqItem";
 
 const Page = async () => {
   // index.json を読み込む
-  const url = process.env.NEXT_PUBLIC_BASE_URL + "/faqs";
+  const url = process.env.NEXT_PUBLIC_BACKEND_HOST + "/faqs";
   const response = await fetch(url);
   const json = await response.json();
 

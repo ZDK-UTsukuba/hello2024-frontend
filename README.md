@@ -5,7 +5,9 @@
 
 ## 開発環境セットアップ
 0. （必要ならば）[バックエンド](https://github.com/ZDK-UTsukuba/hello2024-backend)を立てる
-    * 環境変数の`NEXT_PUBLIC_BASE_URL`に追加する
+    * 環境変数を追加する
+    * `NEXT_PUBLIC_BACKEND_HOST`: hello2024-backendのURL
+    * `NEXT_PUBLIC_FRONTEND_HOST`: hello2024-frontendのURL
 1. git、Node.js、npmを使用できる環境を用意する
 2. `git clone`をする
 3. `npm install`をする
