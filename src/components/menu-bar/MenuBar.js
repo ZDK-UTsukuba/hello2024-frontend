@@ -26,11 +26,12 @@ export const MenuBar = () => {
               <Link href={`/faq-list`}>よくある質問</Link>
             </li>
           </div>
-          <div className="menu-item">
+      {/*<div className="menu-item">
             <li>
               <Link href={``}>質問フォーム↗</Link>
             </li>
           </div>
+      */}
         </ul>
       </div>
     </div>
