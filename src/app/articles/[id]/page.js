@@ -8,14 +8,47 @@ import { FONT_MANIFEST } from "next/dist/shared/lib/constants";
 
 const Page = async ({ params }) => {
   // index.json を読み込む
-  const jsonUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/posts/${params.id}`;
+  const jsonUrl = `${process.env.NEXT_PUBLIC_BACKEND_HOST}/posts/${params.id}`;
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
 
   const markdown = item.body;
 
+  const jsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "BreadcrumbList",
+              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}#breadcrumbList`,
+              itemListElement: [{
+                "@type": "ListItem",
+                position: 1,
+                name: item.categories.join("/"),
+                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article-list/${item.categories.join("/")}`
+              },{
+                "@type": "ListItem",
+                position: 2,
+                name: item.name,
+                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}`
+              }]
+          },
+          {
+              "@type": "Article",
+              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}#article`,
+              author: {
+                  "@type": "Organization",
+                  name: "全学学類・専門学群・総合学域群代表者会議",
+                  url: "https://zdk.tsukuba.ac.jp",
+              },
+              datePublished: item.created_at,
+              headline: item.name
+          }
+      ]
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <div className="wrapper">
         <div className="main-content">
