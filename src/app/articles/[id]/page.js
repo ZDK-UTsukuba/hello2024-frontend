@@ -40,7 +40,7 @@ const Page = async ({ params }) => {
               author: {
                   "@type": "Organization",
                   name: "全学学類・専門学群・総合学域群代表者会議",
-                  url: "https://zdk.tsukuba.ac.jp",
+                  url: "https://www.zdk.tsukuba.ac.jp",
               },
               datePublished: item.created_at,
               headline: item.name
