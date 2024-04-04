@@ -15,7 +15,7 @@ export const MenuBar = () => {
             </li>
             <ul className="menu-category">
               {categories.map((category) => (
-                <li>
+                <li key={category}>
                   <Link href={`/article-list/${category}`}>{category}</Link>
                 </li>
               ))}

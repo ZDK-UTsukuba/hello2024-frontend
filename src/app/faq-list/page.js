@@ -8,12 +8,31 @@ import FaqItem from "@/components/faq-item/FaqItem";
 
 const Page = async () => {
   // index.json を読み込む
-  const url = process.env.NEXT_PUBLIC_BASE_URL + "/faqs";
+  const url = process.env.NEXT_PUBLIC_BACKEND_HOST + "/faqs";
   const response = await fetch(url);
   const json = await response.json();
 
+  const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/faq-list#faq`,
+      mainEntity: [],
+  };
+
+  json.map(qa => {
+      jsonLd.mainEntity.push({
+        "@type": "Question",
+        "name": qa.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": qa.answer
+        }
+      })
+  })
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <div className="wrapper">
         <div className="main-content">
