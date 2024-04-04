@@ -6,6 +6,8 @@ import "@/app/article-list/stylesheet.css";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
 import CategoryFilter from "@/components/category-filter/CategoryFilter";
 
+export const runtime = 'edge';
+
 const Page = async ({ params }) => {
   // index.json を読み込む
   const url = process.env.NEXT_PUBLIC_BACKEND_HOST + "/posts";

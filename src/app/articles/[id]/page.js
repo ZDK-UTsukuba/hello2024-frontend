@@ -6,6 +6,8 @@ import { MenuBar } from "@/components/menu-bar/MenuBar";
 import "@/app/articles/stylesheet.css";
 import { FONT_MANIFEST } from "next/dist/shared/lib/constants";
 
+export const runtime = 'edge';
+
 const Page = async ({ params }) => {
   // index.json を読み込む
   const jsonUrl = `${process.env.NEXT_PUBLIC_BACKEND_HOST}/posts/${params.id}`;
