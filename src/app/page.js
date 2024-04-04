@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Page = async () => {
   // index.json を読み込む
-  const url = process.env.NEXT_PUBLIC_FRONTEND_HOST + "/posts";
+  const url = process.env.NEXT_PUBLIC_BACKEND_HOST + "/posts";
   const response = await fetch(url);
   const json = await response.json();
 
