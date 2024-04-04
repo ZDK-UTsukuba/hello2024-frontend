@@ -19,22 +19,22 @@ const Page = async ({ params }) => {
       "@graph": [
           {
               "@type": "BreadcrumbList",
-              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}#breadcrumbList`,
+              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/article/${item.number}#breadcrumbList`,
               itemListElement: [{
                 "@type": "ListItem",
                 position: 1,
                 name: item.categories.join("/"),
-                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article-list/${item.categories.join("/")}`
+                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/article-list/${item.categories.join("/")}`
               },{
                 "@type": "ListItem",
                 position: 2,
                 name: item.name,
-                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}`
+                item: `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/article/${item.number}`
               }]
           },
           {
               "@type": "Article",
-              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}article/${item.number}#article`,
+              "@id": `${process.env.NEXT_PUBLIC_FRONTEND_HOST}/article/${item.number}#article`,
               author: {
                   "@type": "Organization",
                   name: "全学学類・専門学群・総合学域群代表者会議",
