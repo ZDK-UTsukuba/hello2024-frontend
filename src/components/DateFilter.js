@@ -8,7 +8,7 @@ const DateFilter = (date) => {
 
   const dateObject = new Date(year, month - 1, day, hour, min, sec);
 
-  const datereturn = dateObject.toLocaleString();
+  const datereturn = dateObject;
   return datereturn;
 };
 

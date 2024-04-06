@@ -11,7 +11,7 @@ const ListItem = ({ id, title, date, category }) => {
           <b>{title}</b>
         </Link>
       </div>
-      {date && <div>最終更新：{lastupdate}</div>}
+      {date && <div>最終更新：{lastupdate.toLocaleString()}</div>}
       カテゴリ：{category}
     </li>
   );
