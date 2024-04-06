@@ -1,8 +1,10 @@
 import Link from "next/link";
 import DateFilter from "../DateFilter";
+import TimeCalc from "../TimeCalc";
 
 const ListItem = ({ id, title, date, category }) => {
   const lastupdate = DateFilter(date);
+  const elapsed = TimeCalc(lastupdate);
 
   return (
     <li>
@@ -11,7 +13,7 @@ const ListItem = ({ id, title, date, category }) => {
           <b>{title}</b>
         </Link>
       </div>
-      {date && <div>最終更新：{lastupdate.toLocaleString()}</div>}
+      {date && <div>最終更新：{elapsed}日前（{lastupdate.toLocaleString()}）</div>}
       カテゴリ：{category}
     </li>
   );
