@@ -1,6 +1,9 @@
 import Link from "next/link";
+import DateFilter from "../DateFilter";
 
 const ListItem = ({ id, title, date, category }) => {
+  const lastupdate = DateFilter(date);
+
   return (
     <li>
       <div>
@@ -8,7 +11,7 @@ const ListItem = ({ id, title, date, category }) => {
           <b>{title}</b>
         </Link>
       </div>
-      {date && <div>最終更新：{date}</div>}
+      {date && <div>最終更新：{lastupdate}</div>}
       カテゴリ：{category}
     </li>
   );
