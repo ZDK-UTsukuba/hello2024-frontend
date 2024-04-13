@@ -3,6 +3,7 @@ import { ArticleContent } from "@/components/article-content/ArticleContent";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
+import "@/app/globals.css";
 import "@/app/articles/stylesheet.css";
 import { FONT_MANIFEST } from "next/dist/shared/lib/constants";
 
