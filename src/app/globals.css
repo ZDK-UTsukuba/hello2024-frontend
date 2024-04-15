@@ -1,3 +1,6 @@
+/* normarize.cssを導入 */
+@import 'normalize.css';
+
 html {
   height: 100%;
   background-color: #f7f7f7;

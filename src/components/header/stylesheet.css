@@ -7,10 +7,21 @@ header {
   padding: 0;
 }
 
-header > h1 {
+header>h1 {
   color: #ffffff;
   font-size: 56px;
   margin: 0;
   padding: 16px 32px;
   float: left;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+
+}
+
+h1>a:link,
+h1>a:visited,
+h1>a:hover,
+h1>a:active {
+  color: #ffffff;
+  text-decoration: none;
 }
