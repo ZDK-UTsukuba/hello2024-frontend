@@ -3,6 +3,8 @@ import { ArticleContent } from "@/components/article-content/ArticleContent";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { MenuBar } from "@/components/menu-bar/MenuBar";
+import DateFilter from "@/components/DateFilter";
+import TimeCalc from "@/components/TimeCalc";
 import "@/app/globals.css";
 import "@/app/articles/stylesheet.css";
 import { FONT_MANIFEST } from "next/dist/shared/lib/constants";
@@ -15,6 +17,8 @@ const Page = async ({ params }) => {
   const jsonResponse = await fetch(jsonUrl);
   const item = await jsonResponse.json();
 
+  const lastupdate = DateFilter(item.created_at);
+  const elapsed = TimeCalc(lastupdate);
   const markdown = item.body;
 
   const jsonLd = {
@@ -49,6 +53,8 @@ const Page = async ({ params }) => {
       ]
   };
 
+  
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -57,7 +63,7 @@ const Page = async ({ params }) => {
         <div className="main-content">
           <div className="heading">
             <h1>{item.name}</h1>
-            <time>{item.created_at}</time>
+            <time>最終更新：{elapsed}日前</time>
             <p>
               カテゴリ：
               {item.categories.join("/")}

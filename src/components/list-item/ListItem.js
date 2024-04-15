@@ -1,6 +1,11 @@
 import Link from "next/link";
+import DateFilter from "../DateFilter";
+import TimeCalc from "../TimeCalc";
 
 const ListItem = ({ id, title, date, category }) => {
+  const lastupdate = DateFilter(date);
+  const elapsed = TimeCalc(lastupdate);
+
   return (
     <li>
       <div>
@@ -8,7 +13,7 @@ const ListItem = ({ id, title, date, category }) => {
           <b>{title}</b>
         </Link>
       </div>
-      {date && <div>最終更新：{date}</div>}
+      {date && <div>最終更新：{elapsed}日前</div>}
       カテゴリ：{category}
     </li>
   );
