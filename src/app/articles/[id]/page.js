@@ -62,7 +62,7 @@ const Page = async ({ params }) => {
         <div className="main-content">
           <div className="heading">
             <h1>{item.name}</h1>
-            <time>最終更新：{elapsed}日前（{lastupdate.toLocaleString()}）</time>
+            <time>最終更新：{elapsed}日前</time>
             <p>
               カテゴリ：
               {item.categories.join("/")}
